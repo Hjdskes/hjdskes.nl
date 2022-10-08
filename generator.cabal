@@ -1,0 +1,39 @@
+cabal-version: 3.4
+name:          generator
+version:       0.0.1
+license:       MIT
+license-file:  LICENSE
+author:        Jente Hidskes Ankarberg
+maintainer:    dev@hjdskes.nl
+
+common globals
+  ghc-options:
+    -Wall -Werror -Wredundant-constraints -fhide-source-paths
+    -Wderiving-defaults -Wpartial-fields -Wunused-packages
+
+  default-language:   Haskell2010
+  default-extensions:
+    DataKinds
+    DeriveAnyClass
+    DeriveGeneric
+    DerivingVia
+    FlexibleContexts
+    FlexibleInstances
+    GeneralizedNewtypeDeriving
+    ImportQualifiedPost
+    LambdaCase
+    MultiParamTypeClasses
+    OverloadedStrings
+    ScopedTypeVariables
+    TypeApplications
+    TypeOperators
+    UndecidableInstances
+
+  build-depends:      base >=4.14.3.0 && <5
+
+executable generator
+  import:         globals
+  hs-source-dirs: app
+  main-is:        Main.hs
+  other-modules:
+  build-depends:

@@ -1,0 +1,26 @@
+name: "Test"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  tests:
+    name: Compile artefacts
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v18
+    - name: Format
+      run: |
+        nix fmt
+        nix develop -c cabal-fmt --Werror --check -i generator.cabal
+        nix develop -c fourmolu -e -i $(find . -name '*.hs')
+    - name: Lint
+      run: nix develop -c hlint .
+    - name: Build generator
+      run: nix build .#generator
+    - name: Generate website
+      run: nix build .#website

@@ -8,7 +8,7 @@ A Nix development shell is available through `nix develop`. Compiling the genera
 
 The generator code is documented with Haddock, which can be rendered using `cabal haddock --haddock-executables`.
 
-The code can be formatted by running `cabal-fmt -i generator.cabal`, `fourmolu -e -i $(find . -name '*.hs')` and `nix fmt`.
+The code can be formatted by running `cabal-fmt -i generator.cabal`, `fourmolu -e -i $(find . -name '*.hs')` and `nix fmt`. A linter is available through `hlint .`.
 
 ## License
 

@@ -36,4 +36,17 @@ executable generator
   hs-source-dirs: app
   main-is:        Main.hs
   other-modules:
+    Config
+    Files
+    Static
+
   build-depends:
+    , aeson
+    , directory
+    , filepath
+    , filepattern
+    , mtl
+    , pandoc
+    , unliftio
+    , unliftio-core
+    , yaml

@@ -22,5 +22,7 @@ jobs:
       run: nix develop -c hlint .
     - name: Build generator
       run: nix build .#generator
+    - name: Generator documentation
+      run: nix develop -c cabal haddock --haddock-executables
     - name: Generate website
       run: nix build .#website

@@ -38,16 +38,20 @@ executable generator
   other-modules:
     Config
     Files
+    Pandoc
     Static
 
   build-depends:
     , aeson
+    , data-default
     , deriving-aeson
     , directory
+    , doctemplates
     , filepath
     , filepattern
     , mtl
     , pandoc
+    , text
     , unliftio
     , unliftio-core
     , yaml

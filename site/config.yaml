@@ -1,2 +1,13 @@
 inputPath: "site/"
 outputPath: "docs/"
+
+siteParams:
+  author: "Jente Hidskes Ankarberg"
+  baseUrl: "https://www.hjdskes.nl/"
+  lang: "en-us"
+  siteTitle: "Jente's website"
+  copyright: "Copyright © 2016-2022"
+  siteLogo: "img/avatar.svg"
+  emailAddress: "personal@hjdskes.nl"
+  twitterHandle: "Hjdskes"
+  githubUser: "Hjdskes"

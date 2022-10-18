@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="$lang$">
+  ${ head.html() }  
+  <body>
+    <div class="banner">
+      <a href="$baseUrl$"><img src="$siteLogo$" alt="logo"/></a>
+      <div>
+        <a id="name" href="$baseUrl$"><h1>$siteTitle$</h1></a>
+        <nav>
+          <a href="$baseUrl$blog">Blog</a>
+          <a href="$baseUrl$projects">Projects &amp; contributions</a>
+          <a href="$baseUrl$about">About me</a>
+        </nav>
+      </div>
+    </div>
+    <h1>$title$</h1>
+    $body$
+    ${ footer.html() }
+
+    <link rel="stylesheet" type="text/css" href="css/syntax.css"/>
+    <link rel="stylesheet" type="text/css" href="css/zoom.css"/>
+    <script defer type="text/javascript" src="js/zoom-vanilla.js"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        images = document.querySelectorAll("img[data-action=\"zoom\"]");
+        images.forEach(function(image) {
+          image.style.display = "block";
+        })
+      }, false);
+    </script>
+  </body>
+</html>

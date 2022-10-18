@@ -36,17 +36,23 @@ executable generator
   hs-source-dirs: app
   main-is:        Main.hs
   other-modules:
+    About
     Config
     Files
+    Pandoc
     Static
 
   build-depends:
     , aeson
+    , data-default
+    , deriving-aeson
     , directory
+    , doctemplates
     , filepath
     , filepattern
     , mtl
     , pandoc
+    , text
     , unliftio
     , unliftio-core
     , yaml

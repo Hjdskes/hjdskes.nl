@@ -36,6 +36,7 @@ executable generator
   hs-source-dirs: app
   main-is:        Main.hs
   other-modules:
+    About
     Config
     Files
     Pandoc

@@ -1,0 +1,45 @@
+<head>
+  <meta charset="utf-8"/>
+  <meta name="author" content="$author$"/>
+  $if(description)$
+  <meta name="description" content="$description$">
+  $else$
+  <meta name="description" content="$title$">
+  $endif$
+  <meta name="generator" content="Built with Haskell using Pandoc"/>
+  <meta name="referrer" content="no-referrer"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  $if(description)$
+  <meta property="og:description" content="$description$"/>
+  $else$
+  <meta property="og:description" content="$title$"/>
+  $endif$
+  <meta property="og:locale" content="$lang$"/>
+  <meta property="og:site_name" content="$siteTitle$"/>
+  <meta property="og:title" content="$title$"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="$baseUrl$"/>
+  $if(siteLogo)$
+  <meta property="og:image" content="$baseUrl$$siteLogo$"/>
+  $endif$
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image:alt" content="Logo"/>
+  $if(twitterHandle)$
+  <meta name="twitter:site" content="@$twitterHandle$">
+  <meta name="twitter:creator" content="@$twitterHandle$">
+  $endif$
+
+  $if(title)$
+  <title>$siteTitle$ - $title$</title>
+  $else$
+  <title>$siteTitle$</title>
+  $endif$
+
+  $--<link rel="alternate" type="application/rss+xml" href="blog/index.xml" title="RSS">
+  <link rel="shortcut icon" href="$baseUrl$img/favicon.ico"/>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito|Roboto+Mono"/>
+  <link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+</head>
